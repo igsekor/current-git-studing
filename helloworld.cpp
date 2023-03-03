@@ -18,7 +18,7 @@ void printStars(double offset) {
   for (int i = 0; i < offset; i++) {
     cout << " ";
   }
-  cout << "*" << endl;
+  cout << "+" << endl;
 }
 
 void printFunc(double (&func)(double), double a, double b, int stepCount) {
