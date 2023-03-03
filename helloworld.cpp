@@ -10,6 +10,10 @@ double square(double x) {
   return x * x;
 }
 
+double cubic(double x) {
+  return x * x * x;
+}
+
 void printFunc(double (&func)(double), double a, double b, int stepCount) {
   double dx = (b - a) / stepCount;
   for (int i = 0; i < stepCount; i++) {
@@ -23,5 +27,6 @@ int main(int argc, char const *argv[]) {
   int pointCount = 10;
   printFunc(linear, xMin, xMax, pointCount);
   printFunc(square, xMin, xMax, pointCount);
+  printFunc(cubic, xMin, xMax, pointCount);
   return 0;
 }
