@@ -6,10 +6,17 @@ double linear(double x) {
   return x;
 }
 
+void printStars(double offset) {
+  for (int i = 0; i < offset; i++) {
+    cout << " ";
+  }
+  cout << "*" << endl;
+}
+
 void printFunc(double (&func)(double), double a, double b, int stepCount) {
   double dx = (b - a) / stepCount;
   for (int i = 0; i < stepCount; i++) {
-    cout << func(a + i * dx);
+    printStars(func(a + i * dx));
   }
 }
 
